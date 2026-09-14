@@ -1,0 +1,53 @@
+=== Host ===
+Job executed on: cpu01.slurm.cpe.kmutt.ac.th
+Job started on: Tue Sep 15 01:57:54 AM +07 2026
+=== Python ===
+Python executable location: /storage/slurm/home/69070701619@cpe.kmutt.ac.th/deep_learning/env_dl/bin/python
+Python version: Python 3.12.3
+=== Execution ===
+alpha=0.01
+  loss[0]   = 318371093.7868
+  loss[100] = 131453812.4011
+  loss[-1]  = 128208541.5655
+  weights   = [13199.27255147  2713.48289132 -1182.30601111  2369.15972822]
+
+alpha=0.1
+  loss[0]   = 318371093.7868
+  loss[100] = 128208541.5655
+  loss[-1]  = 128208541.5655
+  weights   = [13199.27257368  2713.4828943  -1182.30601039  2369.15972733]
+
+predictions (alpha=0.01 weights):
+  age=31 gender=0 bmi=22 -> charges=9407.61
+  age=43 gender=1 bmi=19 -> charges=8188.65
+  age=28 gender=1 bmi=33 -> charges=10829.26
+  age=50 gender=0 bmi=28 -> charges=15517.16
+----
+loss[0]   = 0.6931
+loss[100] = 0.0484
+loss[-1]  = 0.0061
+weights   = [ 0.37871155  1.03741007 -1.66142913  2.05490133  2.1086294 ]
+
+confusion matrix, positive class = Iris-versicolor
+  actual setosa:     predicted setosa=17  predicted versicolor=0
+  actual versicolor: predicted setosa=0  predicted versicolor=13
+accuracy = 1.0000
+----
+batch_size=8
+  loss[0]  = 318371093.7868
+  loss[-1] = 128757363.1281
+  weights  = [12728.39728854  2887.08468296  -618.10760492  2279.63484401]
+
+batch_size=32
+  loss[0]  = 318371093.7868
+  loss[-1] = 128293864.7733
+  weights  = [13376.81765587  2785.32123687  -923.68981642  2527.10760058]
+
+batch_size=64
+  loss[0]  = 318371093.7868
+  loss[-1] = 128295702.8402
+  weights  = [13323.57502915  2777.3497288  -1224.89088828  2546.7080605 ]
+
+full batch (500 samples) for comparison
+  loss[0]  = 318371093.7868
+  loss[-1] = 128208541.5655
